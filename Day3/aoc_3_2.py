@@ -25,8 +25,7 @@ for i in range (0, len(ox_lines[0])-1):
 			zero_occ = zero_occ + 1
 	# select the values according to the most common value
 	if one_occ >= zero_occ:
-		for line in ox_lines:
-			ox_list = [line for line in ox_lines if line[i] == '1']
+		ox_list = [line for line in ox_lines if line[i] == '1']
 	else:
 		ox_list = [line for line in ox_lines if line[i] == '0']
 	ox_lines = ox_list
