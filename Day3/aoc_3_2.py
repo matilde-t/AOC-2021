@@ -32,7 +32,7 @@ for i in range (0, len(ox_lines[0])-1):
 		for line in ox_lines:
 			if line[i] == "0":
 				ox_list.append(line)
-	ox_lines = ox_list.copy()
+	ox_lines = ox_list
 	# check if a single value is reached
 	if len(ox_list) == 1:
 		break
@@ -58,7 +58,7 @@ for i in range (0, len(co2_lines[0])-1):
 		for line in co2_lines:
 			if line[i] == "1":
 				co2_list.append(line)
-	co2_lines = co2_list.copy()
+	co2_lines = co2_list
 	# check if a single value is reached
 	if len(co2_list) == 1:
 		break
