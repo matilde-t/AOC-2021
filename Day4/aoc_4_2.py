@@ -19,12 +19,7 @@ while file.readline() == '\n':
 for number in extractions:
 	for i in range(0, len(tables)):
 		tables[i].replace(number, -1, inplace=True)
-		if any(tables[i].sum(0) == -5):
-			dropped = dropped + 1
-			if dropped == len(tables):
-				break
-			tables[i].drop(list(range(0,5)), inplace=True)
-		elif any(tables[i].sum(1) == -5):
+		if any(tables[i].sum(0) == -5) or any(tables[i].sum(1) == -5):
 			dropped = dropped + 1
 			if dropped == len(tables):
 				break
@@ -33,4 +28,3 @@ for number in extractions:
 			break
 tables[i].replace(-1, 0, inplace=True)
 print(sum(tables[i].sum())*number)
-

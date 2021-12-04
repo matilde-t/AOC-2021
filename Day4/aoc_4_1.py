@@ -19,10 +19,7 @@ win = False
 for number in extractions:
 	for i in range(0, len(tables)):
 		tables[i].replace(number, -1, inplace=True)
-		if any(tables[i].sum(0) == -5):
-			win = True
-			break
-		elif any(tables[i].sum(1) == -5):
+		if any(tables[i].sum(0) == -5) or any(tables[i].sum(1) == -5):
 			win = True
 			break
 	if win:
