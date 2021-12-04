@@ -15,7 +15,7 @@ while file.readline() == '\n':
 	tables[i] = pd.DataFrame([list(map(int, file.readline().split())) for x \
 						   in range(5)])
 	i = i+1
-	dropped = 0
+dropped = 0
 for number in extractions:
 	for i in range(0, len(tables)):
 		tables[i].replace(number, -1, inplace=True)
