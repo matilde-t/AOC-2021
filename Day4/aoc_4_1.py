@@ -26,3 +26,4 @@ for number in extractions:
 		break
 tables[i].replace(-1, 0, inplace=True)
 print(sum(tables[i].sum())*number)
+file.close()
