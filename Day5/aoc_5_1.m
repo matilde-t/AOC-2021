@@ -25,3 +25,4 @@ while 1
     end
 end
 sum(sum(vents>1))
+fclose('all');
