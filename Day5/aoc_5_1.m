@@ -11,18 +11,13 @@ while 1
     end
     data = data + 1;
     if data(1) == data(3)
-        if data(2)<data(4)
-            vents(data(1),data(2):data(4)) = vents(data(1),data(2):data(4)) + 1;
-        else
-            vents(data(1),data(4):data(2)) = vents(data(1),data(4):data(2)) + 1;
-        end
+        vents(data(1),min(data(2),data(4)):max(data(2),data(4))) = ...
+            vents(data(1),min(data(2),data(4)):max(data(2),data(4))) + 1;
     elseif data(2) == data(4)
-        if data(1)<data(3)
-            vents(data(1):data(3),data(2)) = vents(data(1):data(3),data(2)) + 1;
-        else
-            vents(data(3):data(1),data(2)) = vents(data(3):data(1),data(2)) + 1;
-        end
+        vents(min(data(1),data(3)):max(data(1),data(3)),data(2)) = ...
+            vents(min(data(1),data(3)):max(data(1),data(3)),data(2)) + 1;
     end
 end
 sum(sum(vents>1))
+spy(vents)
 fclose('all');
