@@ -2,8 +2,8 @@ clear
 close all
 clc
 
-file = fopen("./input.txt", "r");
-vents = sparse(1000,1000);
+file = fopen("./prova.txt", "r");
+vents = sparse(1500,800);
 while 1
     data = fscanf(file, "%d,%d -> %d,%d", 4);
     if size(data) == 0
@@ -32,5 +32,5 @@ while 1
     end
 end
 sum(sum(vents>1))
-spy(vents)
+spy(vents')
 fclose('all');
