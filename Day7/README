@@ -1,0 +1,3 @@
+I implemented two solutions:
+- brute force in Python;
+- particle swarm optimization in Octave using my experimental algorithm (my undergrad's thesis, work in progress), which at the moment works with hard coded parameters.
