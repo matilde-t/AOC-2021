@@ -3,8 +3,6 @@
 #include <math.h>
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
-//#define FUNCTION fuel += abs(crabs[j]-i); //part 1
-#define FUNCTION fuel += abs(crabs[j]-i)*(abs(crabs[j]-i)+1)/2; //part 2
 
 int main() {
     FILE *f;
@@ -24,7 +22,7 @@ int main() {
         fuel = 0;
         for(j=0; j<crabs_size; j++)
         {
-            FUNCTION
+            fuel += abs(crabs[j]-i)*(abs(crabs[j]-i)+1)/2;
         }
         min_fuel = MIN(min_fuel, fuel);
     }
