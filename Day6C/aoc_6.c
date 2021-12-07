@@ -11,7 +11,7 @@ int main()
     f = fopen("input.txt", "r");
     char input[INPUT_LEN], *val;
     int num, i, j;
-    double fish[TIMER] = {0}, zeros, sum = 0;
+    long fish[TIMER] = {0}, zeros, sum = 0;
     fscanf(f, "%s", input);
     val = strtok(input, ",");
     while(val!=NULL)
@@ -34,7 +34,7 @@ int main()
     {
         sum += fish[i];
     }
-    printf("%.0f", sum);
+    printf("%ld", sum);
     fclose(f);
     return 0;
 }
