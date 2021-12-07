@@ -1,3 +1,4 @@
 I implemented two solutions:
 - brute force in Python;
+- brute force in C, works with both parts just by changing the #DEFINE on top;
 - particle swarm optimization in Octave using my experimental algorithm (my undergrad's thesis, work in progress), which at the moment works with hard coded parameters.
