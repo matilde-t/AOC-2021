@@ -13,11 +13,9 @@ with open('input.txt', 'r') as f:
 		if len(parts)!=2:
 			break
 		examples = parts[0].split()
-		one = set([example for example in examples if len(example)==2][0])
 		seven = set([example for example in examples if len(example)==3][0])
 		four = set([example for example in examples if len(example)==4][0])
-		eight = set([example for example in examples if len(example)==7][0])
-		lower_left = eight.copy()
+		lower_left = set([example for example in examples if len(example)==7][0])
 		for el in (four.union(seven)):
 			lower_left.discard(el)
 		digits = parts[1].split()
