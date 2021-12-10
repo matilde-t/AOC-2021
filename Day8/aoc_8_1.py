@@ -5,6 +5,7 @@ Created on Wed Dec  8 10:31:10 2021
 
 @author: mati
 """
+
 count = 0
 with open('input.txt', 'r') as f:
 	while True:
